@@ -1,3 +1,15 @@
+// Rolagem suave nos links do menu
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = anchor.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
 // Configurações padrão para o SDK (necessário para gerenciamento de configurações)
 const defaultConfig = {
   name: "João Silva",
