@@ -1,60 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Pessoal</title>
-  <script src="/_sdk/element_sdk.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      box-sizing: border-box;
-    }
- </style>
-
-  <style>@view-transition { navigation: auto; }</style>
-
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-
- </head>
-
- <body>
-
-  <div class="container">
-
-   <header>
-
-    <div class="profile-image">
-
-     👨‍💻
-
-    </div>
-
-    <h1 id="header-name">Mayra</h1>
-
-    <p class="subtitle" id="header-title">Desenvolvedor Full Stack</p>
-
-   </header>
-
-   <nav>
-
-    <ul>
-
-     <li><a onclick="scrollToSection('sobre')">Sobre</a></li>
-
-     <li><a onclick="scrollToSection('habilidades')">Habilidades</a></li>
-
-     <li><a onclick="scrollToSection('projetos')">Projetos</a></li>
-
-     <li><a onclick="scrollToSection('contato')">Contato</a></li>
-
-    </ul>
-
-   </nav>
-
-   <main>
-
-    <section id="sobre">
+  <title>Contato - Mayra Calegario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contato</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <section id="sobre">
 
      <h2>Sobre Mim</h2>
 
@@ -65,163 +23,33 @@
      </div>
 
     </section>
-
-    <section id="habilidades">
-
-     <h2>Habilidades</h2>
-
-     <div class="skills-grid">
-
-      <div class="skill-card">
-
-       <div class="skill-icon">
-
-        💻
-
-       </div>
-
-       <div class="skill-name">
-
-        HTML/CSS
-
-       </div>
-
-      </div>
-
-      <div class="skill-card">
-
-       <div class="skill-icon">
-
-        ⚡
-
-       </div>
-
-       <div class="skill-name">
-
-        JavaScript
-
-       </div>
-
-      </div>
-
-      <div class="skill-card">
-
-       <div class="skill-icon">
-
-        ⚛️
-
-       </div>
-
-       <div class="skill-name">
-
-        React
-
-       </div>
-
-      </div>
-
-      <div class="skill-card">
-
-       <div class="skill-icon">
-
-        🎨
-
-       </div>
-
-       <div class="skill-name">
-
-        Design
-
-       </div>
-
-      </div>
-
-     </div>
-
-    </section>
-
-    <section id="projetos">
-
-     <h2>Projetos</h2>
-
-     <div class="projects-grid">
-
-      <div class="project-card">
-
-       <div class="project-icon">
-
-        🚀
-
-       </div>
-
-       <h3 class="project-title" id="project1-title">E-commerce Moderno</h3>
-
-       <p class="project-description" id="project1-desc">Plataforma completa de vendas online com carrinho, pagamento e painel administrativo.</p>
-
-      </div>
-
-      <div class="project-card">
-
-       <div class="project-icon">
-
-        📊
-
-       </div>
-
-       <h3 class="project-title" id="project2-title">Dashboard Analytics</h3>
-
-       <p class="project-description" id="project2-desc">Sistema de visualização de dados com gráficos interativos e relatórios em tempo real.</p>
-
-      </div>
-
-      <div class="project-card">
-
-       <div class="project-icon">
-
-        💬
-
-       </div>
-
-       <h3 class="project-title" id="project3-title">App de Mensagens</h3>
-
-       <p class="project-description" id="project3-desc">Aplicativo de chat em tempo real com suporte a grupos e compartilhamento de mídia.</p>
-
-      </div>
-
-     </div>
-
-    </section>
-
-    <section id="contato">
-
-     <h2>Contato</h2>
-
-     <div class="contact-content">
-
-      <p>Vamos trabalhar juntos? Entre em contato!</p>
-
-      <div class="contact-info">
-
-       <div class="contact-item"><span class="contact-icon">📧</span> <span id="contact-email">joao.silva@email.com</span>
-
-       </div>
-
-       <div class="contact-item"><span class="contact-icon">📱</span> <span id="contact-phone">(11) 98765-4321</span>
-
-       </div>
-
-      </div>
-
-     </div>
-
-    </section>
-
-   </main>
-
-   <footer>
-
-    <p>© 2024 - Desenvolvido com ❤️</p>
-
-   </footer>
-
-  </div>
+    
+      <a href="portfolio.html">Portfólio</a>
+      <a href="contato.html" class="ativo">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Entre em contato comigo 📬</h2>
+    <form id="contactForm">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu email" required>
+      <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="social-links">
+      <p>Ou me encontre nas redes:</p>
+      <a href="#">Instagram</a> |
+      <a href="#">LinkedIn</a> |
+      <a href="#">GitHub</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Mayra Calegario</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
