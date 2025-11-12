@@ -24,7 +24,7 @@ header {
   height: 120px;
   border-radius: 50%; /* deixa o formato perfeitamente redondo */
   overflow: hidden; /* garante que a imagem não ultrapasse o círculo */
-  background: linear-gradient(115deg, #e95c16 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #e95c16 0%, #f5576c 100%);
   margin: 0 auto 40px; /* centraliza e dá espaço abaixo */
   display: flex;
   align-items: center;
