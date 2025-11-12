@@ -20,9 +20,9 @@ header {
 }
 
 .profile-image {
-  width: 90px; 
-  height: 90px; 
-  border-radius: 50%; 
+  width: 110px; 
+  height: 110px; 
+  border-radius: 60%; 
   overflow: hidden; 
   
   background: linear-gradient(135deg, #e95c16 0%, #f5576c 100%);
