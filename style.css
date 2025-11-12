@@ -20,12 +20,12 @@ header {
 }
 
 .profile-image {
-  width: 80px; /* tamanho ajustado (pequeno e visível) */
+  width: 80px; 
   height: 70px;
-  border-radius: 50%; /* deixa o formato perfeitamente redondo */
-  overflow: hidden; /* garante que a imagem não ultrapasse o círculo */
+  border-radius: 50%; 
+  overflow: hidden; 
   background: linear-gradient(135deg, #e95c16 0%, #f5576c 100%);
-  margin: 0 auto 50px; /* centraliza e dá espaço abaixo */
+  margin: 0 auto 50px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +36,8 @@ header {
 .profile-image img {
   width: 80%;
   height: 85%;
-  object-fit: cover; /* mantém a proporção e cobre o círculo */
-  border-radius: 60%; /* mantém o formato redondo */
+  object-fit: cover; 
+  border-radius: 60%; 
 }
 
 
