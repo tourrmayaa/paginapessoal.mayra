@@ -20,18 +20,26 @@ header {
 }
 
 .profile-image {
-  width: 35px;
-  height: 45px;
-  border-radius: 60%;
+  width: 120px; /* tamanho ajustado (pequeno e visível) */
+  height: 120px;
+  border-radius: 50%; /* deixa o formato perfeitamente redondo */
+  overflow: hidden; /* garante que a imagem não ultrapasse o círculo */
   background: linear-gradient(115deg, #e95c16 0%, #f5576c 100%);
-  margin: 10 auto 75px;
+  margin: 0 auto 40px; /* centraliza e dá espaço abaixo */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 60px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   animation: pulse 2s infinite;
 }
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantém a proporção e cobre o círculo */
+  border-radius: 50%; /* mantém o formato redondo */
+}
+
 
 h1 {
   font-size: 48px;
