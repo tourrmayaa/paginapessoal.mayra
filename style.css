@@ -20,9 +20,9 @@ header {
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 95px;
+  height: 95px;
+  border-radius: 60%;
   background: linear-gradient(135deg, #e95c16 0%, #f5576c 100%);
   margin: 0 auto 30px;
   display: flex;
