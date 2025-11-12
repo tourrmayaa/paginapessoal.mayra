@@ -20,11 +20,11 @@ header {
 }
 
 .profile-image {
-  width: 75px;
-  height: 65px;
+  width: 35px;
+  height: 45px;
   border-radius: 60%;
   background: linear-gradient(115deg, #e95c16 0%, #f5576c 100%);
-  margin: 0 auto 50px;
+  margin: 10 auto 75px;
   display: flex;
   align-items: center;
   justify-content: center;
