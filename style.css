@@ -34,10 +34,10 @@ header {
 }
 
 .profile-image img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 85%;
   object-fit: cover; /* mantém a proporção e cobre o círculo */
-  border-radius: 50%; /* mantém o formato redondo */
+  border-radius: 60%; /* mantém o formato redondo */
 }
 
 
