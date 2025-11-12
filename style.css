@@ -23,8 +23,8 @@ header {
   width: 75px;
   height: 65px;
   border-radius: 60%;
-  background: linear-gradient(135deg, #e95c16 0%, #f5576c 100%);
-  margin: 0 auto 30px;
+  background: linear-gradient(115deg, #e95c16 0%, #f5576c 100%);
+  margin: 0 auto 50px;
   display: flex;
   align-items: center;
   justify-content: center;
