@@ -1,0 +1,529 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Valores iniciais do gradiente */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.gallery-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* Cor de destaque inicial */
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 24px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.gallery-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 60px 40px;
+    margin: 40px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+h2 {
+    font-size: 36px;
+    margin: 0 0 40px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.photo-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.photo-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.photo-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.photo-date {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.upload-area {
+    border: 3px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 60px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.upload-area:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.upload-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.upload-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.upload-hint {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.modal-photo {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    /* Cor de destaque inicial */
+    color: #f093fb; 
+}
+
+.stat-label {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .gallery-section {
+        padding: 40px 20px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-photo {
+        height: 300px;
+        font-size: 60px;
+    }
+}
+
+const defaultConfig = {
+    gallery_title: "Nossa Família",
+    gallery_subtitle: "Momentos especiais juntos",
+    memories_title: "Memórias Especiais",
+    recent_title: "Fotos Recentes",
+    family_title: "Família Reunida",
+    background_gradient_start: "#667eea",
+    background_gradient_end: "#764ba2",
+    card_background: "rgba(255, 255, 255, 0.1)",
+    text_color: "#ffffff",
+    accent_color: "#f093fb",
+    font_family: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+    font_size: 16
+};
+
+async function onConfigChange(config) {
+    const titleElement = document.getElementById('gallery-title');
+    const subtitleElement = document.getElementById('gallery-subtitle');
+    const memoriesTitleElement = document.getElementById('memories-title');
+    const recentTitleElement = document.getElementById('recent-title');
+    const familyTitleElement = document.getElementById('family-title');
+
+    if (titleElement) {
+        titleElement.textContent = config.gallery_title || defaultConfig.gallery_title;
+    }
+    if (subtitleElement) {
+        subtitleElement.textContent = config.gallery_subtitle || defaultConfig.gallery_subtitle;
+    }
+    if (memoriesTitleElement) {
+        memoriesTitleElement.textContent = config.memories_title || defaultConfig.memories_title;
+    }
+    if (recentTitleElement) {
+        recentTitleElement.textContent = config.recent_title || defaultConfig.recent_title;
+    }
+    if (familyTitleElement) {
+        familyTitleElement.textContent = config.family_title || defaultConfig.family_title;
+    }
+
+    const customFont = config.font_family || defaultConfig.font_family;
+    const baseFontStack = 'Arial, sans-serif';
+    document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+
+    const baseSize = config.font_size || defaultConfig.font_size;
+    const h1Elements = document.querySelectorAll('h1');
+    h1Elements.forEach(el => el.style.fontSize = `${baseSize * 3}px`);
+    
+    const subtitleElements = document.querySelectorAll('.subtitle');
+    subtitleElements.forEach(el => el.style.fontSize = `${baseSize * 1.5}px`);
+    
+    const h2Elements = document.querySelectorAll('h2');
+    h2Elements.forEach(el => el.style.fontSize = `${baseSize * 2.25}px`);
+
+    const bgGradientStart = config.background_gradient_start || defaultConfig.background_gradient_start;
+    const bgGradientEnd = config.background_gradient_end || defaultConfig.background_gradient_end;
+    document.body.style.background = `linear-gradient(135deg, ${bgGradientStart} 0%, ${bgGradientEnd} 100%)`;
+
+    const textColor = config.text_color || defaultConfig.text_color;
+    document.body.style.color = textColor;
+
+    const cardBg = config.card_background || defaultConfig.card_background;
+    const sections = document.querySelectorAll('.gallery-section');
+    sections.forEach(section => {
+        section.style.background = cardBg;
+    });
+
+    const accentColor = config.accent_color || defaultConfig.accent_color;
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach(stat => {
+        stat.style.color = accentColor;
+    });
+}
+
+function mapToCapabilities(config) {
+    return {
+        recolorables: [
+            {
+                get: () => config.background_gradient_start || defaultConfig.background_gradient_start,
+                set: (value) => {
+                    if (window.elementSdk) {
+                        window.elementSdk.config.background_gradient_start = value;
+                        window.elementSdk.setConfig({ background_gradient_start: value });
+                    }
+                }
+            },
+            {
+                get: () => config.card_background || defaultConfig.card_background,
+                set: (value) => {
+                    if (window.elementSdk) {
+                        window.elementSdk.config.card_background = value;
+                        window.elementSdk.setConfig({ card_background: value });
+                    }
+                }
+            },
+            {
+                get: () => config.text_color || defaultConfig.text_color,
+                set: (value) => {
+                    if (window.elementSdk) {
+                        window.elementSdk.config.text_color = value;
+                        window.elementSdk.setConfig({ text_color: value });
+                    }
+                }
+            },
+            {
+                get: () => config.accent_color || defaultConfig.accent_color,
+                set: (value) => {
+                    if (window.elementSdk) {
+                        window.elementSdk.config.accent_color = value;
+                        window.elementSdk.setConfig({ accent_color: value });
+                    }
+                }
+            },
+            {
+                get: () => config.background_gradient_end || defaultConfig.background_gradient_end,
+                set: (value) => {
+                    if (window.elementSdk) {
+                        window.elementSdk.config.background_gradient_end = value;
+                        window.elementSdk.setConfig({ background_gradient_end: value });
+                    }
+                }
+            }
+        ],
+        borderables: [],
+        fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+                if (window.elementSdk) {
+                    window.elementSdk.config.font_family = value;
+                    window.elementSdk.setConfig({ font_family: value });
+                }
+            }
+        },
+        fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+                if (window.elementSdk) {
+                    window.elementSdk.config.font_size = value;
+                    window.elementSdk.setConfig({ font_size: value });
+                }
+            }
+        }
+    };
+}
+
+function mapToEditPanelValues(config) {
+    return new Map([
+        ["gallery_title", config.gallery_title || defaultConfig.gallery_title],
+        ["gallery_subtitle", config.gallery_subtitle || defaultConfig.gallery_subtitle],
+        ["memories_title", config.memories_title || defaultConfig.memories_title],
+        ["recent_title", config.recent_title || defaultConfig.recent_title],
+        ["family_title", config.family_title || defaultConfig.family_title]
+    ]);
+}
+
+if (window.elementSdk) {
+    window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+    });
+}
+
+function openModal(title, date) {
+    const modal = document.getElementById('photoModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDate = document.getElementById('modalDate');
+    const modalPhoto = document.getElementById('modalPhoto');
+    
+    modalTitle.textContent = title;
+    modalDate.textContent = date;
+    
+    const emojis = ['📸', '🎂', '🎄', '🏖️', '🍖', '🌳', '🍽️', '👨‍👩‍👧‍👦', '🎓'];
+    const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+    modalPhoto.textContent = randomEmoji;
+    
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    const modal = document.getElementById('photoModal');
+    modal.style.display = 'none';
+}
+
+function showUploadMessage() {
+    const uploadArea = event.target.closest('.upload-area');
+    const originalContent = uploadArea.innerHTML;
+    
+    // Altera o conteúdo para mostrar a mensagem
+    uploadArea.innerHTML = `
+        <div class="upload-icon">✅</div>
+        <div class="upload-text">Funcionalidade de Upload</div>
+        <div class="upload-hint">Em breve você poderá adicionar suas próprias fotos!</div>
+    `;
+    
+    // Restaura o conteúdo original após 3 segundos
+    setTimeout(() => {
+        uploadArea.innerHTML = originalContent;
+    }, 3000);
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
