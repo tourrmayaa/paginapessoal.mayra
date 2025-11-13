@@ -19,29 +19,29 @@ header {
   animation: fadeInDown 1s ease-out;
 }
 
+/* --- Correção do Perfil e Tamanho Único --- */
 .profile-image {
-  width: 110px; 
-  height: 110px; 
-  border-radius: 60%; 
-  overflow: hidden; 
-  
+  width: 120px; /* Tamanho padronizado */
+  height: 120px; /* Tamanho padronizado */
+  border-radius: 50%; /* Corrigido para círculo perfeito */
+  overflow: hidden;
+
   background: linear-gradient(135deg, #e95c16 0%, #f5576c 100%);
-  margin: 0 auto 50px; 
+  margin: 0 auto 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   animation: pulse 2s infinite;
 }
 
 .profile-image img {
-
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-
-  border-radius: 50%; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
+/* ------------------------------------------- */
 
 h1 {
   font-size: 48px;
@@ -95,6 +95,17 @@ section {
   margin: 40px 0;
   animation: fadeInUp 1s ease-out;
 }
+
+/* --- Novo Seletor para Imagens de Seção --- */
+section img {
+  max-width: 100%; /* Garante responsividade */
+  height: 300px; /* Altura fixa para padronizar o tamanho */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+  display: block;
+  margin: 20px auto; /* Centraliza a imagem */
+  border-radius: 10px;
+}
+/* ------------------------------------------- */
 
 h2 {
   font-size: 36px;
@@ -212,4 +223,9 @@ footer {
   h2 { font-size: 28px; }
   section { padding: 40px 20px; }
   nav ul { gap: 20px; }
+
+  /* Ajuste de imagem responsivo para telas menores */
+  section img {
+    height: 200px; /* Reduz a altura da imagem em dispositivos móveis */
+  }
 }
