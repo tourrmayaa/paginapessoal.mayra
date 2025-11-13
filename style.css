@@ -1,231 +1,231 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #fd3838 0%, #ffffff 100%);
-  color: #ffffff;
-  overflow-x: hidden;
+ margin: 0;
+ padding: 0;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background: linear-gradient(135deg, #fd3838 0%, #ffffff 100%);
+ color: #ffffff;
+ overflow-x: hidden;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 20px;
 }
 
 header {
-  text-align: center;
-  padding: 80px 20px;
-  animation: fadeInDown 1s ease-out;
+ text-align: center;
+ padding: 80px 20px;
+ animation: fadeInDown 1s ease-out;
 }
 
 /* --- Correção do Perfil e Tamanho Único --- */
 .profile-image {
-  width: 120px; /* Tamanho padronizado */
-  height: 120px; /* Tamanho padronizado */
-  border-radius: 50%; /* Corrigido para círculo perfeito */
-  overflow: hidden;
+ width: 120px; /* Tamanho padronizado */
+ height: 120px; /* Tamanho padronizado */
+ border-radius: 50%; /* Corrigido para círculo perfeito */
+ overflow: hidden;
 
-  background: linear-gradient(135deg, #e95c16 0%, #f5576c 100%);
-  margin: 0 auto 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  animation: pulse 2s infinite;
+ background: linear-gradient(135deg, #e95c16 0%, #f5576c 100%);
+ margin: 0 auto 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ animation: pulse 2s infinite;
 }
 
 .profile-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 50%;
 }
 /* ------------------------------------------- */
 
 h1 {
-  font-size: 48px;
-  margin: 0 0 10px;
-  font-weight: 700;
+ font-size: 48px;
+ margin: 0 0 10px;
+ font-weight: 700;
 }
 
 .subtitle {
-  font-size: 24px;
-  opacity: 0.9;
-  font-weight: 300;
+ font-size: 24px;
+ opacity: 0.9;
+ font-weight: 300;
 }
 
 nav {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+ background: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ padding: 15px 0;
+ position: sticky;
+ top: 0;
+ z-index: 100;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
+ list-style: none;
+ display: flex;
+ justify-content: center;
+ gap: 40px;
+ margin: 0;
+ padding: 0;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: all 0.3s;
+ color: #fff;
+ text-decoration: none;
+ font-weight: 500;
+ padding: 8px 16px;
+ border-radius: 20px;
+ transition: all 0.3s;
 }
 
 nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+ background: rgba(255, 255, 255, 0.2);
+ transform: translateY(-2px);
 }
 
 section {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 60px 40px;
-  margin: 40px 0;
-  animation: fadeInUp 1s ease-out;
+ background: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ border-radius: 20px;
+ padding: 60px 40px;
+ margin: 40px 0;
+ animation: fadeInUp 1s ease-out;
 }
 
-/* --- Novo Seletor para Imagens de Seção --- */
+/* --- Ajuste: Aumentando a altura da imagem para 450px --- */
 section img {
-  max-width: 100%; /* Garante responsividade */
-  height: 300px; /* Altura fixa para padronizar o tamanho */
-  object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
-  display: block;
-  margin: 20px auto; /* Centraliza a imagem */
-  border-radius: 10px;
+ max-width: 100%; /* Mantém o limite da seção */
+ height: 450px; /* Novo valor para aumentar o tamanho retangular */
+ object-fit: cover;
+ display: block;
+ margin: 20px auto;
+ border-radius: 10px;
 }
 /* ------------------------------------------- */
 
 h2 {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 30px;
+ font-size: 36px;
+ text-align: center;
+ margin-bottom: 30px;
 }
 
 .about-content {
-  font-size: 18px;
-  line-height: 1.8;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+ font-size: 18px;
+ line-height: 1.8;
+ text-align: center;
+ max-width: 800px;
+ margin: 0 auto;
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 30px;
+ margin-top: 40px;
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  transition: all 0.3s;
+ background: rgba(255, 255, 255, 0.15);
+ padding: 30px;
+ border-radius: 15px;
+ text-align: center;
+ transition: all 0.3s;
 }
 
 .skill-card:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.25);
+ transform: translateY(-10px);
+ background: rgba(255, 255, 255, 0.25);
 }
 
 .skill-icon {
-  font-size: 48px;
-  margin-bottom: 15px;
+ font-size: 48px;
+ margin-bottom: 15px;
 }
 
 .contact-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+ text-align: center;
+ max-width: 600px;
+ margin: 0 auto;
 }
 
 .contact-info {
-  font-size: 20px;
-  margin: 30px 0;
+ font-size: 20px;
+ margin: 30px 0;
 }
 
 .contact-info a {
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+ color: #fff;
+ text-decoration: none;
+ border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .contact-info a:hover {
-  border-bottom-color: #fff;
+ border-bottom-color: #fff;
 }
 
 .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ margin-top: 30px;
 }
 
 .social-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  transition: all 0.3s;
-  text-decoration: none;
-  color: #fff;
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ background: rgba(255, 255, 255, 0.2);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 24px;
+transition: all 0.3s;
+text-decoration: none;
+color: #fff;
 }
 
 .social-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1);
+ background: rgba(255, 255, 255, 0.3);
+ transform: scale(1.1);
 }
 
 footer {
-  text-align: center;
-  padding: 40px 20px;
-  opacity: 0.8;
-  font-size: 14px;
+ text-align: center;
+ padding: 40px 20px;
+ opacity: 0.8;
+ font-size: 14px;
 }
 
 /* Animações */
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
+ from { opacity: 0; transform: translateY(-30px); }
+ to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+ from { opacity: 0; transform: translateY(30px); }
+ to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+ 0%, 100% { transform: scale(1); }
+ 50% { transform: scale(1.05); }
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  h1 { font-size: 36px; }
-  .subtitle { font-size: 18px; }
-  h2 { font-size: 28px; }
-  section { padding: 40px 20px; }
-  nav ul { gap: 20px; }
+ h1 { font-size: 36px; }
+ .subtitle { font-size: 18px; }
+ h2 { font-size: 28px; }
+ section { padding: 40px 20px; }
+ nav ul { gap: 20px; }
 
-  /* Ajuste de imagem responsivo para telas menores */
-  section img {
-    height: 200px; /* Reduz a altura da imagem em dispositivos móveis */
-  }
+/* Ajuste de imagem responsivo para telas menores */
+ section img {
+  height: 250px; /* Aumentado de 200px para 250px para telas menores */
+ }
 }
