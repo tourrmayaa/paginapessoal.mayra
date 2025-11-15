@@ -1,4 +1,4 @@
-// Rolagem suave nos links do menu
+s// Rolagem suave nos links do menu
 document.querySelectorAll('nav a').forEach(anchor => {
   anchor.addEventListener('click', e => {
     e.preventDefault();
@@ -12,16 +12,16 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 // Configurações padrão para o SDK (necessário para gerenciamento de configurações)
 const defaultConfig = {
-  name: "João Silva",
+  name: "Mayra Calegario",
   title: "Desenvolvedor Full Stack",
-  about_text: "Sou um desenvolvedor apaixonado por criar experiências digitais incríveis. Com experiência em desenvolvimento web e mobile, busco sempre aprender novas tecnologias e aplicar as melhores práticas em cada projeto.",
+  about_text: "Olá! Estudo desenvolvimento de sistemas e estou no 2° ano, tenho 16 anos. Gosto de esportes, principalmente futebol e vôlei, adoro sair com minha família e amigos, e sou apaixonada por paisagens",
   project1_title: "E-commerce Moderno",
   project1_desc: "Plataforma completa de vendas online com carrinho, pagamento e painel administrativo.",
   project2_title: "Dashboard Analytics",
   project2_desc: "Sistema de visualização de dados com gráficos interativos e relatórios em tempo real.",
   project3_title: "App de Mensagens",
   project3_desc: "Aplicativo de chat em tempo real com suporte a grupos e compartilhamento de mídia.",
-  contact_email: "joao.silva@email.com",
+  contact_email: "mayracalegario1631@gmail.com",
   contact_phone: "(11) 98765-4321",
   background_color: "#667eea",
   accent_color: "#f093fb",
